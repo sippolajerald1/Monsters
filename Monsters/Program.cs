@@ -81,6 +81,21 @@ namespace Monsters
                     Attitude = Monster.EmotionalState.bored
                 },
 
+                new Monster()
+                {
+                    Name = "Dave",
+                    Age = 220,
+                    Attitude = Monster.EmotionalState.sad
+                },
+
+                new Monster()
+                {
+                    Name = "George",
+                    Age = 210,
+                    Attitude = Monster.EmotionalState.bored
+                },
+
+
                 new Monster("Bill", 999, Monster.EmotionalState.bored)
 
             };
