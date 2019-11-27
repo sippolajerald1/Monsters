@@ -1,0 +1,5 @@
+﻿Sid,44,happy
+Lucy,33,sad
+Bill,46,bored
+Joan,12,happy
+Sue,99,happy
