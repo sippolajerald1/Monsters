@@ -55,6 +55,9 @@ namespace Monsters
             set { _town = value; }
         }
 
+        public object Tribe { get; internal set; }
+        public string Team { get; internal set; }
+
         #endregion
 
         #region CONSTRUCTORS

@@ -11,9 +11,9 @@ namespace Monsters
     //
     // Title: Monsters
     // Description: Demonstration of classes and objects
-    // Author: Velis, John
-    // Dated Created: 11/11/2019
-    // Last Modified: 
+    // Author: Jerald Sippola
+    // Last Modified: 11/28/19
+    // Level: Novice
     //
     // **************************************************    
     class Program
@@ -23,13 +23,13 @@ namespace Monsters
             //
             // initialize monster list from seed data
             //
-            //List<Monster> monsters = InitializeMonsterList();
+            List<Monster> monsters = InitializeMonsterList();
 
             //
             // read data from file into list
             //
+            //List<Monster> monsters = ReadFromFile();
 
-            List<Monster> monsters = ReadFromFile();
             //
             // call methods
             //
@@ -71,34 +71,54 @@ namespace Monsters
                 {
                     Name = "Sid",
                     Age = 145,
-                    Attitude = Monster.EmotionalState.happy
+                    Attitude = Monster.EmotionalState.happy,
+                    Tribe = "Red",
+                    Team = "Lions",
+
+
                 },
 
                 new Monster()
                 {
                     Name = "Lucy",
                     Age = 125,
-                    Attitude = Monster.EmotionalState.bored
+                    Attitude = Monster.EmotionalState.bored,
+                    Tribe = "Blue",
+                    Team = "Vikings"
                 },
 
                 new Monster()
                 {
                     Name = "Dave",
                     Age = 220,
-                    Attitude = Monster.EmotionalState.sad
+                    Attitude = Monster.EmotionalState.sad,
+                    Tribe = "Green",
+                    Team = "Bears"
                 },
 
                 new Monster()
                 {
                     Name = "George",
                     Age = 210,
-                    Attitude = Monster.EmotionalState.bored
+                    Attitude = Monster.EmotionalState.bored,
+                    Tribe = "Orange",
+                    Team = "Seahawks"
+
                 },
 
+                new Monster()
+                {
+                    Name = "Mike",
+                    Age = 212,
+                    Attitude = Monster.EmotionalState.sad,
+                    Tribe = "Yellow",
+                    Team = "Pistons"
 
-                new Monster("Bill", 999, Monster.EmotionalState.bored)
+                }
 
-            };
+                //new Monster("Bill", 999, Monster.EmotionalState.bored, "Gold");
+
+        };
 
             Console.WriteLine(monsters[0]);
 
@@ -395,6 +415,25 @@ namespace Monsters
                 selectedMonster.Attitude = attitude;
             }
 
+            //
+
+            Console.Write($"\tCurrent Tribe: {selectedMonster.Tribe} New Tribe: ");
+            userResponse = Console.ReadLine();
+            if (userResponse != "")
+            {
+                selectedMonster.Tribe = userResponse;
+            }
+
+            //
+            Console.Write($"\tCurrent Team: {selectedMonster.Team} New Team: ");
+            userResponse = Console.ReadLine();
+            if (userResponse != "")
+            {
+                selectedMonster.Team = userResponse;
+            }
+
+
+            //
 
 
             DisplayContinuePrompt();
@@ -514,6 +553,13 @@ namespace Monsters
             Console.Write("\tAttitude: ");
             Enum.TryParse(Console.ReadLine(), out Monster.EmotionalState attitude);
             newMonster.Attitude = attitude;
+            Console.WriteLine("\tTribe: ");
+            newMonster.Tribe = Console.ReadLine();
+            Console.WriteLine("\tTeam: ");
+           
+           
+          
+        
 
             //
             // echo new monster properties
@@ -546,6 +592,8 @@ namespace Monsters
             Console.WriteLine($"\tAge: {monster.Age}");
             Console.WriteLine($"\tAttitude: {monster.Attitude}");
             Console.WriteLine("\t" + monster.Greeting());
+            Console.WriteLine($"\tTribe: {monster.Tribe}");
+            Console.WriteLine($"\tTeam: {monster.Team}");
 
         }
 
