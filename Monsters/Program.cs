@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Monsters
 {
-    // **************************************************
+    // **************************************************/
     //
     // Title: Monsters
     // Description: Demonstration of classes and objects
@@ -15,7 +15,7 @@ namespace Monsters
     // Last Modified: 11/28/19
     // Level: Novice
     //
-    // **************************************************   / 
+    // ************************************************** 
     class Program
     {
         static void Main(string[] args)
