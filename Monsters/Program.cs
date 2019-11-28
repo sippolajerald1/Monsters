@@ -35,6 +35,7 @@ namespace Monsters
             //
             DisplayMenuScreen(monsters);
             //
+            //
         }
 
         static List<Monster> InitializeMonsterList()
